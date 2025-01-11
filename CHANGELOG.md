@@ -1,7 +1,7 @@
 # Changelog
 
 
-## 0.10.0 (unreleased)
+## 0.9.2 (2025-01-11)
 
 - Added support for Python 3.13.
 
