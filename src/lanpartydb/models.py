@@ -4,7 +4,7 @@ lanpartydb.models
 
 Data models
 
-:Copyright: 2024 Jochen Kupperschmidt
+:Copyright: 2024-2025 Jochen Kupperschmidt
 :License: MIT
 """
 
