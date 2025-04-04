@@ -45,7 +45,7 @@ from lanpartydb.writing import serialize_party
                     name='City Hall',
                     country_code='us',
                     city='Los Angeles',
-                    zip_code='90099',
+                    postal_code='90099',
                     street='123 North Hill Street',
                     latitude=Decimal('34.06101057935884'),
                     longitude=Decimal('-118.23974355902666'),
@@ -71,7 +71,7 @@ from lanpartydb.writing import serialize_party
             name = "City Hall"
             country_code = "us"
             city = "Los Angeles"
-            zip_code = "90099"
+            postal_code = "90099"
             street = "123 North Hill Street"
             latitude = 34.06101057935884
             longitude = -118.23974355902666

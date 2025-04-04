@@ -42,7 +42,7 @@ class Location:
     name: str | None = field(kw_only=True, default=None)
     country_code: str
     city: str
-    zip_code: str | None = None
+    postal_code: str | None = None
     street: str | None = None
     latitude: Decimal | None = None
     longitude: Decimal | None = None
