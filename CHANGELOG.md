@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 0.11.0 (unreleased)
+
+
 ## 0.10.0 (2025-04-04)
 
 - Upgraded to LANpartyDB data format v0.9 (backwards-incompatible).
