@@ -51,4 +51,4 @@ lines-after-imports = 2
 order-by-type = false
 
 [tool.uv]
-required-version = ">=0.5.16"
+required-version = ">=0.6.12"
