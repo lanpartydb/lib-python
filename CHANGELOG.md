@@ -29,8 +29,8 @@
 
 - Fixed parsing of empty series document.
 
-- Changed type of ``Series`` fields ``alternative_names``,
-  ``country_codes`` from ``set[str]`` to ``list[str]``.
+- Changed type of `Series` fields `alternative_names`,
+  `country_codes` from `set[str]` to `list[str]`.
 
 - Fixed serialization of party location's latitude and longitude.
 
@@ -54,7 +54,7 @@
 
 ## 0.7.0 (2024-07-01)
 
-- Added optional ``country_codes`` property to ``Series``.
+- Added optional `country_codes` property to `Series`.
 
 
 ## 0.6.0 (2024-06-30)
@@ -64,18 +64,18 @@
 
 ## 0.5.0 (2024-06-30)
 
-- Removed support to load website URL from ``links.website``. From now
-  on, it is expected only in ``links.website.url``.
+- Removed support to load website URL from `links.website`. From now
+  on, it is expected only in `links.website.url`.
 
 
 ## 0.4.0 (2024-06-30)
 
-- Generalized name of model ``Website`` to ``Resource``.
+- Generalized name of model `Website` to `Resource`.
 
 
 ## 0.3.0 (2024-05-16)
 
-- Added optional ``attendees`` property to ``Party``.
+- Added optional `attendees` property to `Party`.
 
 - Added support for Python 3.12.
 
