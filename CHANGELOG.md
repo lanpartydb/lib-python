@@ -3,6 +3,8 @@
 
 ## 0.11.0 (unreleased)
 
+- Updated tomlkit to v0.13.3 (from v0.13.2).
+
 
 ## 0.10.0 (2025-04-04)
 
