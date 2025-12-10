@@ -8,7 +8,7 @@ from decimal import Decimal
 
 import pytest
 
-from lanpartydb.models import Links, Location, Party, Resource
+from lanpartydb.models import Location, Party, PartyLinks, Resource
 from lanpartydb.reading import read_party_from_toml
 
 
@@ -78,7 +78,7 @@ from lanpartydb.reading import read_party_from_toml
                     latitude=Decimal('34.06101057935884'),
                     longitude=Decimal('-118.23974355902666'),
                 ),
-                links=Links(
+                links=PartyLinks(
                     website=Resource(
                         url='https://www.superlan.example/',
                         offline=False,

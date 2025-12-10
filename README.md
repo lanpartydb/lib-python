@@ -63,7 +63,7 @@ from datetime import date
 from decimal import Decimal
 from pathlib import Path
 
-from lanpartydb.models import Links, Location, Party, Resource
+from lanpartydb.models import Location, Party, PartyLinks, Resource
 from lanpartydb.writing import serialize_party
 
 party = Party(
@@ -85,7 +85,7 @@ party = Party(
         latitude=Decimal('34.06101057935884'),
         longitude=Decimal('-118.23974355902666'),
     ),
-    links=Links(
+    links=PartyLinks(
         website=Resource(
             url='https://www.superlan.example/',
             offline=False,

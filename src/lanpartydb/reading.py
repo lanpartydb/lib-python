@@ -13,7 +13,7 @@ from pathlib import Path
 import tomllib
 from typing import Any
 
-from .models import Links, Location, Party, Resource, Series
+from .models import Location, Party, PartyLinks, Resource, Series
 
 
 # series
@@ -65,7 +65,7 @@ def _read_party_from_dict(party_dict: dict[str, Any]) -> Party:
                 url=website_dict['url'],
                 offline=website_dict.get('offline', False),
             )
-            party_dict['links'] = Links(website=website)
+            party_dict['links'] = PartyLinks(website=website)
 
     return Party(**party_dict)
 

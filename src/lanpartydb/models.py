@@ -34,7 +34,7 @@ class Party:
     attendees: int | None = None
     online: bool | None = False
     location: Location | None = None
-    links: Links | None = None
+    links: PartyLinks | None = None
 
 
 @dataclass(frozen=True)
@@ -49,7 +49,7 @@ class Location:
 
 
 @dataclass(frozen=True)
-class Links:
+class PartyLinks:
     website: Resource | None
 
 
