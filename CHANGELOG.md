@@ -3,6 +3,8 @@
 
 ## 0.11.0 (unreleased)
 
+- Updated ruff to v0.14.8 (from v0.11.3).
+
 - Updated tomlkit to v0.13.3 (from v0.13.2).
 
 
