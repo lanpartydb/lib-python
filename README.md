@@ -99,8 +99,8 @@ path = Path('./superlan-2024.toml')
 path.write_text(toml)
 ```
 
-Take a look at the code (in `src/`) and the tests (in `tests/`) to learn
-more about the library's interface.
+Take a look at the code (in `src/`) and the tests (in `tests/`) to learn more
+about the library's interface.
 
 
 ## License

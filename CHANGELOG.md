@@ -29,8 +29,8 @@
 
 - Fixed parsing of empty series document.
 
-- Changed type of `Series` fields `alternative_names`,
-  `country_codes` from `set[str]` to `list[str]`.
+- Changed type of `Series` fields `alternative_names`, `country_codes` from
+  `set[str]` to `list[str]`.
 
 - Fixed serialization of party location's latitude and longitude.
 
@@ -64,8 +64,8 @@
 
 ## 0.5.0 (2024-06-30)
 
-- Removed support to load website URL from `links.website`. From now
-  on, it is expected only in `links.website.url`.
+- Removed support to load website URL from `links.website`. From now on, it is
+  expected only in `links.website.url`.
 
 
 ## 0.4.0 (2024-06-30)
