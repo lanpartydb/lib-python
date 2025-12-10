@@ -22,6 +22,7 @@ classifiers = [
 
 [project.urls]
 Repository = "https://github.com/lanpartydb/lib-python"
+Changelog = "https://github.com/lanpartydb/lib-python/blob/main/CHANGELOG.md"
 
 [build-system]
 requires = ["hatchling"]
