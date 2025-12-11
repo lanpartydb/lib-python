@@ -11,8 +11,38 @@ Data writing
 import dataclasses
 from typing import Any
 
-from lanpartydb.models import Party
+from lanpartydb.models import Party, Series
 import tomlkit
+
+
+# series
+
+
+def serialize_series_list(series_list: list[Series]) -> str:
+    """Serialize list of series to TOML document."""
+    aot = tomlkit.aot()
+
+    for series in series_list:
+        series_dict = _series_to_sparse_dict(series)
+        aot.append(tomlkit.item(series_dict))
+
+    doc = tomlkit.document()
+    doc.append('series', aot)
+
+    return _write_toml(doc)
+
+
+def serialize_series(series: Series) -> str:
+    """Serialize series to TOML document."""
+    series_dict = _series_to_sparse_dict(series)
+
+    return _write_toml(series_dict)
+
+
+def _series_to_sparse_dict(series: Series) -> dict[str, Any]:
+    data = dataclasses.asdict(series)
+    _remove_default_values(data)
+    return data
 
 
 # party
@@ -50,9 +80,11 @@ def _write_toml(d: dict[str, Any]) -> str:
 
 
 def _remove_default_values(d: dict[str, Any]) -> dict[str, Any]:
-    """Remove `None` and `False`, values from first level of dictionary."""
+    """Remove `None`, `False`, and `[]` values from first level of
+    dictionary.
+    """
     for k, v in list(d.items()):
-        if (v is None) or (v is False):
+        if (v is None) or (v is False) or (v == []):
             del d[k]
         elif isinstance(v, dict):
             _remove_default_values(v)
