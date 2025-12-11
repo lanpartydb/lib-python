@@ -42,7 +42,7 @@ To serialize a party with only the required attributes to TOML:
 from datetime import date
 
 from lanpartydb.models import Party
-from lanpartydb.writing import serialize_party
+from lanpartydb.serialization import serialize_party
 
 party = Party(
     slug='megalan-2023',
@@ -64,7 +64,7 @@ from decimal import Decimal
 from pathlib import Path
 
 from lanpartydb.models import Location, Party, PartyLinks, Resource
-from lanpartydb.writing import serialize_party
+from lanpartydb.serialization import serialize_party
 
 party = Party(
     slug='superlan-2024',

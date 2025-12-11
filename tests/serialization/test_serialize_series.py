@@ -8,7 +8,7 @@ from textwrap import dedent
 import pytest
 
 from lanpartydb.models import Series
-from lanpartydb.writing import serialize_series, serialize_series_list
+from lanpartydb.serialization import serialize_series, serialize_series_list
 
 
 def test_serialize_series_list():

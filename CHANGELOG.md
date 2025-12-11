@@ -3,6 +3,8 @@
 
 ## 0.11.0 (unreleased)
 
+- Renamed `writing` subpackage to `serialization`.
+
 - Implemented serialization of series.
 
 - Renamed model `Links` to `PartyLinks`.

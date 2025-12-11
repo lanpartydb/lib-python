@@ -1,8 +1,8 @@
 """
-lanpartydb.writing
-~~~~~~~~~~~~~~~~~~
+lanpartydb.serialization
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-Data writing
+Object serialization to TOML
 
 :Copyright: 2024-2025 Jochen Kupperschmidt
 :License: MIT

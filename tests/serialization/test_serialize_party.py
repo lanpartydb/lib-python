@@ -10,7 +10,7 @@ from textwrap import dedent
 import pytest
 
 from lanpartydb.models import Location, Party, PartyLinks, Resource
-from lanpartydb.writing import serialize_party
+from lanpartydb.serialization import serialize_party
 
 
 @pytest.mark.parametrize(
