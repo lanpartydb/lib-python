@@ -5,8 +5,8 @@
 
 import pytest
 
+from lanpartydb.deserialization import deserialize_series_list
 from lanpartydb.models import Series
-from lanpartydb.reading import read_series_list_from_toml
 
 
 @pytest.mark.parametrize(
@@ -62,5 +62,5 @@ from lanpartydb.reading import read_series_list_from_toml
         ),
     ],
 )
-def test_read_series_list_from_toml(toml: str, expected: list[Series]):
-    assert read_series_list_from_toml(toml) == expected
+def test_deserialize_series_list(toml: str, expected: list[Series]):
+    assert deserialize_series_list(toml) == expected

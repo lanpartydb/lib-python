@@ -3,6 +3,9 @@
 
 ## 0.11.0 (unreleased)
 
+- Renamed `reading` subpackage to `deserialization`, and adjusted function
+  names.
+
 - Renamed `writing` subpackage to `serialization`.
 
 - Implemented serialization of series.

@@ -1,8 +1,8 @@
 """
-lanpartydb.reading
-~~~~~~~~~~~~~~~~~~
+lanpartydb.deserialization
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Data reading
+TOML deserialization to objects
 
 :Copyright: 2024-2025 Jochen Kupperschmidt
 :License: MIT
@@ -19,40 +19,40 @@ from .models import Location, Party, PartyLinks, Resource, Series
 # series
 
 
-def read_series_list_from_toml_file(filename: Path) -> list[Series]:
-    """Read list of series from a TOML file."""
+def deserialize_series_list_from_toml_file(filename: Path) -> list[Series]:
+    """Deserialize list of series from a TOML file."""
     toml = filename.read_text()
-    return read_series_list_from_toml(toml)
+    return deserialize_series_list(toml)
 
 
-def read_series_list_from_toml(toml: str) -> list[Series]:
-    """Read list of series from a TOML document."""
+def deserialize_series_list(toml: str) -> list[Series]:
+    """Deserialize list of series from a TOML document."""
     data = _load_toml(toml)
-    return _read_series_list_from_dict(data)
+    return _deserialize_series_list_from_dict(data)
 
 
-def _read_series_list_from_dict(data: dict[str, Any]) -> list[Series]:
-    """Read list of series from a dictionary."""
+def _deserialize_series_list_from_dict(data: dict[str, Any]) -> list[Series]:
+    """Build list of series from a dictionary."""
     return [Series(**item) for item in data.get('series', [])]
 
 
 # party
 
 
-def read_party_from_toml_file(filename: Path) -> Party:
-    """Read party from a TOML file."""
+def deserialize_party_from_toml_file(filename: Path) -> Party:
+    """Deserialize party from a TOML file."""
     toml = filename.read_text()
-    return read_party_from_toml(toml)
+    return deserialize_party(toml)
 
 
-def read_party_from_toml(toml: str) -> Party:
-    """Read party from a TOML document."""
+def deserialize_party(toml: str) -> Party:
+    """Deserialize party from a TOML document."""
     data = _load_toml(toml)
-    return _read_party_from_dict(data)
+    return _deserialize_party_from_dict(data)
 
 
-def _read_party_from_dict(party_dict: dict[str, Any]) -> Party:
-    """Read party from a dictionary."""
+def _deserialize_party_from_dict(party_dict: dict[str, Any]) -> Party:
+    """Build party from a dictionary."""
     location_dict = party_dict.pop('location', None)
     if location_dict:
         party_dict['location'] = Location(**location_dict)

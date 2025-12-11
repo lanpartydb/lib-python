@@ -8,8 +8,8 @@ from decimal import Decimal
 
 import pytest
 
+from lanpartydb.deserialization import deserialize_party
 from lanpartydb.models import Location, Party, PartyLinks, Resource
-from lanpartydb.reading import read_party_from_toml
 
 
 @pytest.mark.parametrize(
@@ -88,5 +88,5 @@ from lanpartydb.reading import read_party_from_toml
         ),
     ],
 )
-def test_read_party_from_toml(toml: str, expected: Party):
-    assert read_party_from_toml(toml) == expected
+def test_deserialize_party(toml: str, expected: Party):
+    assert deserialize_party(toml) == expected
