@@ -22,10 +22,10 @@ from .models import Location, Party, PartyLinks, Resource, Series
 def deserialize_series_list_from_toml_file(filename: Path) -> list[Series]:
     """Deserialize list of series from a TOML file."""
     toml = filename.read_text()
-    return deserialize_series_list(toml)
+    return deserialize_series_list_from_toml(toml)
 
 
-def deserialize_series_list(toml: str) -> list[Series]:
+def deserialize_series_list_from_toml(toml: str) -> list[Series]:
     """Deserialize list of series from a TOML document."""
     data = _load_toml(toml)
     return _deserialize_series_list_from_dict(data)
@@ -42,10 +42,10 @@ def _deserialize_series_list_from_dict(data: dict[str, Any]) -> list[Series]:
 def deserialize_party_from_toml_file(filename: Path) -> Party:
     """Deserialize party from a TOML file."""
     toml = filename.read_text()
-    return deserialize_party(toml)
+    return deserialize_party_from_toml(toml)
 
 
-def deserialize_party(toml: str) -> Party:
+def deserialize_party_from_toml(toml: str) -> Party:
     """Deserialize party from a TOML document."""
     data = _load_toml(toml)
     return _deserialize_party_from_dict(data)

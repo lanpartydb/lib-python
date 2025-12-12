@@ -5,7 +5,7 @@
 
 import pytest
 
-from lanpartydb.deserialization import deserialize_series_list
+from lanpartydb.deserialization import deserialize_series_list_from_toml
 from lanpartydb.models import Series
 
 
@@ -62,5 +62,5 @@ from lanpartydb.models import Series
         ),
     ],
 )
-def test_deserialize_series_list(toml: str, expected: list[Series]):
-    assert deserialize_series_list(toml) == expected
+def test_deserialize_series_list_from_toml(toml: str, expected: list[Series]):
+    assert deserialize_series_list_from_toml(toml) == expected

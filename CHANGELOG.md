@@ -10,6 +10,9 @@
 
 - Implemented serialization of series.
 
+- Added suffix `_from_toml` to public deserialization functions with string
+  input argument.
+
 - Added suffix `_to_toml` to public serialization functions.
 
 - Renamed model `Links` to `PartyLinks`.

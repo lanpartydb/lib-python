@@ -8,7 +8,7 @@ from decimal import Decimal
 
 import pytest
 
-from lanpartydb.deserialization import deserialize_party
+from lanpartydb.deserialization import deserialize_party_from_toml
 from lanpartydb.models import Location, Party, PartyLinks, Resource
 
 
@@ -88,5 +88,5 @@ from lanpartydb.models import Location, Party, PartyLinks, Resource
         ),
     ],
 )
-def test_deserialize_party(toml: str, expected: Party):
-    assert deserialize_party(toml) == expected
+def test_deserialize_party_from_toml(toml: str, expected: Party):
+    assert deserialize_party_from_toml(toml) == expected
