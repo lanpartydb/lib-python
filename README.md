@@ -4,7 +4,7 @@ This library provides
 
 - party and party series models,
 - functionality to deserialize parties and party series from TOML, and
-- functionality to serialize parties (but not party series) to TOML
+- functionality to serialize parties and party series to TOML
 
 to work with data for and from the public [LAN party database by
 OrgaTalk](https://lanpartydb.orgatalk.de/).
