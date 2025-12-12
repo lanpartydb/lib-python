@@ -8,7 +8,7 @@
 
 - Renamed `writing` subpackage to `serialization`.
 
-- Implemented serialization of series.
+- Implemented serialization and deserialization of (single) series.
 
 - Added suffix `_from_toml` to public deserialization functions with string
   input argument.
