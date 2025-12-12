@@ -10,7 +10,7 @@ from textwrap import dedent
 import pytest
 
 from lanpartydb.models import Location, Party, PartyLinks, Resource
-from lanpartydb.serialization import serialize_party
+from lanpartydb.serialization import serialize_party_to_toml
 
 
 @pytest.mark.parametrize(
@@ -82,5 +82,5 @@ from lanpartydb.serialization import serialize_party
         ),
     ],
 )
-def test_serialize_party(party: Party, expected: str):
-    assert serialize_party(party) == expected
+def test_serialize_party_to_toml(party: Party, expected: str):
+    assert serialize_party_to_toml(party) == expected

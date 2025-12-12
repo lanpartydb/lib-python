@@ -18,7 +18,7 @@ import tomlkit
 # series
 
 
-def serialize_series_list(series_list: list[Series]) -> str:
+def serialize_series_list_to_toml(series_list: list[Series]) -> str:
     """Serialize list of series to TOML document."""
     aot = tomlkit.aot()
 
@@ -32,7 +32,7 @@ def serialize_series_list(series_list: list[Series]) -> str:
     return _write_toml(doc)
 
 
-def serialize_series(series: Series) -> str:
+def serialize_series_to_toml(series: Series) -> str:
     """Serialize series to TOML document."""
     series_dict = _series_to_sparse_dict(series)
 
@@ -48,7 +48,7 @@ def _series_to_sparse_dict(series: Series) -> dict[str, Any]:
 # party
 
 
-def serialize_party(party: Party) -> str:
+def serialize_party_to_toml(party: Party) -> str:
     """Serialize party to TOML document."""
     party_dict = _party_to_sparse_dict(party)
 

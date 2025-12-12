@@ -10,6 +10,8 @@
 
 - Implemented serialization of series.
 
+- Added suffix `_to_toml` to public serialization functions.
+
 - Renamed model `Links` to `PartyLinks`.
 
 - Updated pytest to v9.0.2 (from v8.3.5).

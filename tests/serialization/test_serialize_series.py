@@ -8,10 +8,13 @@ from textwrap import dedent
 import pytest
 
 from lanpartydb.models import Series
-from lanpartydb.serialization import serialize_series, serialize_series_list
+from lanpartydb.serialization import (
+    serialize_series_to_toml,
+    serialize_series_list_to_toml,
+)
 
 
-def test_serialize_series_list():
+def test_serialize_series_list_to_toml():
     series_list = [
         Series(
             slug='gammalan',
@@ -27,7 +30,7 @@ def test_serialize_series_list():
         ),
     ]
 
-    assert serialize_series_list(series_list) == dedent("""\
+    assert serialize_series_list_to_toml(series_list) == dedent("""\
             [[series]]
             slug = "gammalan"
             name = "GammaLAN"
@@ -73,5 +76,5 @@ def test_serialize_series_list():
         ),
     ],
 )
-def test_serialize_series(series: Series, expected: str):
-    assert serialize_series(series) == expected
+def test_serialize_series_to_toml(series: Series, expected: str):
+    assert serialize_series_to_toml(series) == expected
