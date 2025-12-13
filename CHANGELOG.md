@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 0.11.1 (unreleased)
+
+
 ## 0.11.0 (2025-12-13)
 
 - Adapted to format specification version 0.10:

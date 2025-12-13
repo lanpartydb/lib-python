@@ -1,6 +1,6 @@
 [project]
 name = "lanpartydb"
-version = "0.11.0"
+version = "0.11.1.dev1"
 description = "Python library for the OrgaTalk LAN Party Database"
 readme = "README.md"
 authors = [
