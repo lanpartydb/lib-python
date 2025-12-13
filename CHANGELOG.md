@@ -3,6 +3,11 @@
 
 ## 0.12.0 (unreleased)
 
+- Removed support for serialization and deserialization of lists of series.
+
+  As of format specification version 0.11, each series has to be in a separate
+  file.
+
 
 ## 0.11.1 (2025-12-13)
 

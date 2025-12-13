@@ -16,29 +16,6 @@ from typing import Any
 from .models import Location, Party, PartyLinks, Resource, Series, SeriesLinks
 
 
-# series list
-
-
-def deserialize_series_list_from_toml_file(filename: Path) -> list[Series]:
-    """Deserialize list of series from a TOML file."""
-    toml = filename.read_text()
-    return deserialize_series_list_from_toml(toml)
-
-
-def deserialize_series_list_from_toml(toml: str) -> list[Series]:
-    """Deserialize list of series from a TOML document."""
-    data = _load_toml(toml)
-    return _deserialize_series_list_from_dict(data)
-
-
-def _deserialize_series_list_from_dict(data: dict[str, Any]) -> list[Series]:
-    """Build list of series from a dictionary."""
-    return [
-        _deserialize_series_from_dict(series_dict)
-        for series_dict in data.get('series', [])
-    ]
-
-
 # series
 
 

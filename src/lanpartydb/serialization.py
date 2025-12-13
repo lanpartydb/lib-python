@@ -18,20 +18,6 @@ import tomlkit
 # series
 
 
-def serialize_series_list_to_toml(series_list: list[Series]) -> str:
-    """Serialize list of series to TOML document."""
-    aot = tomlkit.aot()
-
-    for series in series_list:
-        series_dict = _series_to_sparse_dict(series)
-        aot.append(tomlkit.item(series_dict))
-
-    doc = tomlkit.document()
-    doc.append('series', aot)
-
-    return _write_toml(doc)
-
-
 def serialize_series_to_toml(series: Series) -> str:
     """Serialize series to TOML document."""
     series_dict = _series_to_sparse_dict(series)
