@@ -33,7 +33,10 @@ def deserialize_series_list_from_toml(toml: str) -> list[Series]:
 
 def _deserialize_series_list_from_dict(data: dict[str, Any]) -> list[Series]:
     """Build list of series from a dictionary."""
-    return [Series(**item) for item in data.get('series', [])]
+    return [
+        _deserialize_series_from_dict(series_dict)
+        for series_dict in data.get('series', [])
+    ]
 
 
 # series

@@ -3,6 +3,8 @@
 
 ## 0.11.1 (unreleased)
 
+- Added missing deserialization of links in series list.
+
 
 ## 0.11.0 (2025-12-13)
 
