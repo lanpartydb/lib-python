@@ -17,8 +17,8 @@ from decimal import Decimal
 @dataclass(frozen=True)
 class Series:
     slug: str
-    name: str
-    alternative_names: list[str] = field(default_factory=list)
+    title: str
+    alternative_titles: list[str] = field(default_factory=list)
     country_codes: list[str] = field(default_factory=list)
 
 

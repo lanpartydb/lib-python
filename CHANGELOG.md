@@ -3,6 +3,12 @@
 
 ## 0.11.0 (unreleased)
 
+- Adapted to format specification version 0.10:
+
+  - Series property `name` has been renamed to `title`.
+  - Series property `alternative_names` has been renamed to
+    `alternative_titles`.
+
 - Renamed `reading` subpackage to `deserialization`, and adjusted function
   names.
 

@@ -13,14 +13,14 @@ def test_serialize_series_list_to_toml():
     series_list = [
         Series(
             slug='gammalan',
-            name='GammaLAN',
-            alternative_names=[],
+            title='GammaLAN',
+            alternative_titles=[],
             country_codes=['ca', 'us'],
         ),
         Series(
             slug='deltalan',
-            name='DeltaLAN',
-            alternative_names=['Δ LAN', 'Δέλτα LAN'],
+            title='DeltaLAN',
+            alternative_titles=['Δ LAN', 'Δέλτα LAN'],
             country_codes=['au'],
         ),
     ]
@@ -28,12 +28,12 @@ def test_serialize_series_list_to_toml():
     assert serialize_series_list_to_toml(series_list) == dedent("""\
             [[series]]
             slug = "gammalan"
-            name = "GammaLAN"
+            title = "GammaLAN"
             country_codes = ["ca", "us"]
 
             [[series]]
             slug = "deltalan"
-            name = "DeltaLAN"
-            alternative_names = ["Δ LAN", "Δέλτα LAN"]
+            title = "DeltaLAN"
+            alternative_titles = ["Δ LAN", "Δέλτα LAN"]
             country_codes = ["au"]
             """)

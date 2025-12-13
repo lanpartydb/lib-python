@@ -21,13 +21,13 @@ from lanpartydb.models import Series
             """
             [[series]]
             slug = "megalan"
-            name = "MegaLAN"
+            title = "MegaLAN"
             """,
             [
                 Series(
                     slug='megalan',
-                    name='MegaLAN',
-                    alternative_names=[],
+                    title='MegaLAN',
+                    alternative_titles=[],
                     country_codes=[],
                 ),
             ],
@@ -36,26 +36,26 @@ from lanpartydb.models import Series
             """
             [[series]]
             slug = "gammalan"
-            name = "GammaLAN"
+            title = "GammaLAN"
             country_codes = ["ca", "us"]
 
             [[series]]
             slug = "deltalan"
-            name = "DeltaLAN"
-            alternative_names = ["Δ LAN", "Δέλτα LAN"]
+            title = "DeltaLAN"
+            alternative_titles = ["Δ LAN", "Δέλτα LAN"]
             country_codes = ["au"]
             """,
             [
                 Series(
                     slug='gammalan',
-                    name='GammaLAN',
-                    alternative_names=[],
+                    title='GammaLAN',
+                    alternative_titles=[],
                     country_codes=['ca', 'us'],
                 ),
                 Series(
                     slug='deltalan',
-                    name='DeltaLAN',
-                    alternative_names=['Δ LAN', 'Δέλτα LAN'],
+                    title='DeltaLAN',
+                    alternative_titles=['Δ LAN', 'Δέλτα LAN'],
                     country_codes=['au'],
                 ),
             ],

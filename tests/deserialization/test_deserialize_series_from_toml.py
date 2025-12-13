@@ -15,39 +15,39 @@ from lanpartydb.models import Series
         (
             """
             slug = "megalan"
-            name = "MegaLAN"
+            title = "MegaLAN"
             """,
             Series(
                 slug='megalan',
-                name='MegaLAN',
-                alternative_names=[],
+                title='MegaLAN',
+                alternative_titles=[],
                 country_codes=[],
             ),
         ),
         (
             """
             slug = "gammalan"
-            name = "GammaLAN"
+            title = "GammaLAN"
             country_codes = ["ca", "us"]
             """,
             Series(
                 slug='gammalan',
-                name='GammaLAN',
-                alternative_names=[],
+                title='GammaLAN',
+                alternative_titles=[],
                 country_codes=['ca', 'us'],
             ),
         ),
         (
             """
             slug = "deltalan"
-            name = "DeltaLAN"
-            alternative_names = ["Δ LAN", "Δέλτα LAN"]
+            title = "DeltaLAN"
+            alternative_titles = ["Δ LAN", "Δέλτα LAN"]
             country_codes = ["au"]
             """,
             Series(
                 slug='deltalan',
-                name='DeltaLAN',
-                alternative_names=['Δ LAN', 'Δέλτα LAN'],
+                title='DeltaLAN',
+                alternative_titles=['Δ LAN', 'Δέλτα LAN'],
                 country_codes=['au'],
             ),
         ),

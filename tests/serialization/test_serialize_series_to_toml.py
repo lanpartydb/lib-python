@@ -17,27 +17,27 @@ from lanpartydb.serialization import serialize_series_to_toml
         (
             Series(
                 slug='gammalan',
-                name='GammaLAN',
-                alternative_names=[],
+                title='GammaLAN',
+                alternative_titles=[],
                 country_codes=['ca', 'us'],
             ),
             dedent("""\
             slug = "gammalan"
-            name = "GammaLAN"
+            title = "GammaLAN"
             country_codes = ["ca", "us"]
             """),
         ),
         (
             Series(
                 slug='deltalan',
-                name='DeltaLAN',
-                alternative_names=['Δ LAN', 'Δέλτα LAN'],
+                title='DeltaLAN',
+                alternative_titles=['Δ LAN', 'Δέλτα LAN'],
                 country_codes=['au'],
             ),
             dedent("""\
             slug = "deltalan"
-            name = "DeltaLAN"
-            alternative_names = ["Δ LAN", "Δέλτα LAN"]
+            title = "DeltaLAN"
+            alternative_titles = ["Δ LAN", "Δέλτα LAN"]
             country_codes = ["au"]
             """),
         ),
