@@ -6,7 +6,7 @@
 import pytest
 
 from lanpartydb.deserialization import deserialize_series_from_toml
-from lanpartydb.models import Series
+from lanpartydb.models import Series, SeriesLinks, Resource
 
 
 @pytest.mark.parametrize(
@@ -43,12 +43,43 @@ from lanpartydb.models import Series
             title = "DeltaLAN"
             alternative_titles = ["Δ LAN", "Δέλτα LAN"]
             country_codes = ["au"]
+
+            [links.website]
+            url = "https://www.deltalan.example/"
             """,
             Series(
                 slug='deltalan',
                 title='DeltaLAN',
                 alternative_titles=['Δ LAN', 'Δέλτα LAN'],
                 country_codes=['au'],
+                links=SeriesLinks(
+                    website=Resource(
+                        url='https://www.deltalan.example/',
+                        offline=False,
+                    ),
+                ),
+            ),
+        ),
+        (
+            """
+            slug = "epsilan"
+            title = "EpsiLAN"
+            country_codes = ["gr"]
+
+            [links.website]
+            url = "https://www.epsilan.example/"
+            offline = true
+            """,
+            Series(
+                slug='epsilan',
+                title='EpsiLAN',
+                country_codes=['gr'],
+                links=SeriesLinks(
+                    website=Resource(
+                        url='https://www.epsilan.example/',
+                        offline=True,
+                    ),
+                ),
             ),
         ),
     ],

@@ -8,6 +8,7 @@
   - Series property `name` has been renamed to `title`.
   - Series property `alternative_names` has been renamed to
     `alternative_titles`.
+  - Optional `links` section added to series.
 
 - Renamed `reading` subpackage to `deserialization`, and adjusted function
   names.

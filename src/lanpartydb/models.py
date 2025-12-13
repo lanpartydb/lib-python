@@ -20,6 +20,12 @@ class Series:
     title: str
     alternative_titles: list[str] = field(default_factory=list)
     country_codes: list[str] = field(default_factory=list)
+    links: SeriesLinks | None = None
+
+
+@dataclass(frozen=True)
+class SeriesLinks:
+    website: Resource | None
 
 
 @dataclass(frozen=True, kw_only=True)

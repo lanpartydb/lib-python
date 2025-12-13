@@ -13,7 +13,7 @@ from pathlib import Path
 import tomllib
 from typing import Any
 
-from .models import Location, Party, PartyLinks, Resource, Series
+from .models import Location, Party, PartyLinks, Resource, Series, SeriesLinks
 
 
 # series list
@@ -51,9 +51,19 @@ def deserialize_series_from_toml(toml: str) -> Series:
     return _deserialize_series_from_dict(data)
 
 
-def _deserialize_series_from_dict(data: dict[str, Any]) -> Series:
+def _deserialize_series_from_dict(series_dict: dict[str, Any]) -> Series:
     """Build series from a dictionary."""
-    return Series(**data)
+    links_dict = series_dict.pop('links', None)
+    if links_dict:
+        website_dict = links_dict.pop('website', None)
+        if website_dict:
+            website = Resource(
+                url=website_dict['url'],
+                offline=website_dict.get('offline', False),
+            )
+            series_dict['links'] = SeriesLinks(website=website)
+
+    return Series(**series_dict)
 
 
 # party

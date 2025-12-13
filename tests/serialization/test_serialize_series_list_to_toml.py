@@ -5,7 +5,7 @@
 
 from textwrap import dedent
 
-from lanpartydb.models import Series
+from lanpartydb.models import Series, SeriesLinks, Resource
 from lanpartydb.serialization import serialize_series_list_to_toml
 
 
@@ -22,6 +22,11 @@ def test_serialize_series_list_to_toml():
             title='DeltaLAN',
             alternative_titles=['Δ LAN', 'Δέλτα LAN'],
             country_codes=['au'],
+            links=SeriesLinks(
+                website=Resource(
+                    url='https://www.deltalan.example/',
+                ),
+            ),
         ),
     ]
 
@@ -36,4 +41,7 @@ def test_serialize_series_list_to_toml():
             title = "DeltaLAN"
             alternative_titles = ["Δ LAN", "Δέλτα LAN"]
             country_codes = ["au"]
+
+            [series.links.website]
+            url = "https://www.deltalan.example/"
             """)
