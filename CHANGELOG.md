@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 0.13.0 (unreleased)
+
+
 ## 0.12.2 (2026-03-29)
 
 - Removed `License` classifier, set `project.license-files` as per PEP 639.
