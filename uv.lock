@@ -22,7 +22,7 @@ wheels = [
 
 [[package]]
 name = "lanpartydb"
-version = "0.12.2.dev1"
+version = "0.12.2"
 source = { editable = "." }
 dependencies = [
     { name = "tomlkit" },
