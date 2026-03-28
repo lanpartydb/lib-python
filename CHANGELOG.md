@@ -1,7 +1,7 @@
 # Changelog
 
 
-## 0.12.0 (unreleased)
+## 0.12.0 (2026-03-29)
 
 - Added support for Python 3.14.
 
