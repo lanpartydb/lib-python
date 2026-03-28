@@ -10,6 +10,8 @@
   As of format specification version 0.11, each series has to be in a separate
   file.
 
+- Removed development dependency on ruff. Use `uvx ruff` instead.
+
 
 ## 0.11.1 (2025-12-13)
 
