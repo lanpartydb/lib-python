@@ -3,6 +3,8 @@
 
 ## 0.12.0 (unreleased)
 
+- Added support for Python 3.14.
+
 - Removed support for serialization and deserialization of lists of series.
 
   As of format specification version 0.11, each series has to be in a separate
