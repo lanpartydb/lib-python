@@ -3,6 +3,8 @@
 
 ## 0.12.2 (unreleased)
 
+- Removed `License` classifier, set `project.license-files` as per PEP 639.
+
 
 ## 0.12.1 (2026-03-29)
 
