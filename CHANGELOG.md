@@ -5,6 +5,8 @@
 
 - Added support for Python 3.14.
 
+- Raised minimum required uv version to v0.11.2.
+
 - Removed support for serialization and deserialization of lists of series.
 
   As of format specification version 0.11, each series has to be in a separate
