@@ -3,6 +3,8 @@
 
 ## 0.12.1 (unreleased)
 
+- Updated copyright notes for 2026.
+
 
 ## 0.12.0 (2026-03-29)
 
