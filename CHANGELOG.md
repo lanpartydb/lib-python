@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 0.12.2 (unreleased)
+
+
 ## 0.12.1 (2026-03-29)
 
 - Updated copyright notes for 2026.
