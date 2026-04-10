@@ -36,9 +36,9 @@ class Party:
     organizer_entity: str | None = field(kw_only=True, default=None)
     start_on: date
     end_on: date
+    online_only: bool | None = False
     seats: int | None = None
     attendees: int | None = None
-    online: bool | None = False
     location: Location | None = None
     links: PartyLinks | None = None
 

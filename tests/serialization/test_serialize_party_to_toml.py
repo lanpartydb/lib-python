@@ -38,9 +38,9 @@ from lanpartydb.serialization import serialize_party_to_toml
                 organizer_entity='SuperLAN Association',
                 start_on=date(2024, 5, 24),
                 end_on=date(2024, 5, 26),
+                online_only=False,
                 seats=420,
                 attendees=397,
-                online=False,
                 location=Location(
                     name='City Hall',
                     country_code='us',

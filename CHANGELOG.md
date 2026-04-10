@@ -3,6 +3,10 @@
 
 ## 0.13.0 (unreleased)
 
+- Adapted to format specification version 0.12:
+
+  - Party property `online` has been renamed to `online_only`.
+
 
 ## 0.12.2 (2026-03-29)
 
