@@ -7,6 +7,8 @@
 
   - Party property `online` has been renamed to `online_only`.
 
+- Updated pytest to v9.0.3 (from v9.0.2).
+
 
 ## 0.12.2 (2026-03-29)
 
