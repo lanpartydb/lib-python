@@ -8,6 +8,8 @@ on:
   # Allow manual workflow triggering from the "Actions" tab.
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   test:
     runs-on: ubuntu-latest
